@@ -122,10 +122,10 @@ def get_all_results(url, headers, params={}, extra=''):
 
 
 def start_connection_with_EK12():
-	user = os.getenv('EK12_USERNAME')
-	passw = os.getenv('EK12_PASSWORD')
-	host = os.getenv('EK12_HOST')
-	port = os.getenv('EK12_PORT')
+	user = os.getenv('DB_USERNAME')
+	passw = os.getenv('DB_PASSWORD')
+	host = os.getenv('DB_HOST')
+	port = os.getenv('DB_PORT')
 
 	# Connect to the EK12 Database
 	engine = db.create_engine('mssql+pyodbc://{}:{}@{}:{}/{}?driver=ODBC+Driver+17+for+SQL+Server'.format(user, passw, host, port, DATABASE_NAME))
