@@ -5,10 +5,11 @@ import os
 
 DATABASE = 'Name of the School in EK12 Database'
 
-user = os.getenv('EK12_USERNAME')
-passw = os.getenv('EK12_PASSWORD')
-host = os.getenv('EK12_HOST')
-port = os.getenv('EK12_PORT')
+# Retrieving Environment Variables
+user = os.getenv('DB_USERNAME')
+passw = os.getenv('DB_PASSWORD')
+host = os.getenv('DB_HOST')
+port = os.getenv('DB_PORT')
 
 engine = create_engine('mssql+pyodbc://{}:{}@{}:{}/{}?driver=ODBC+Driver+17+for+SQL+Server'.format(user, passw, host, port, DATABASE))
 connection = engine.connect()
