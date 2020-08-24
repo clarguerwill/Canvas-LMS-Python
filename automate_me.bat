@@ -1,0 +1,1 @@
+cd C:\Users\<name of the user>\Documents\Canvas && python main.py
